@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Gene_BraintreeCustomFields>
+            <version>0.1.0</version>
+        </Gene_BraintreeCustomFields>
+    </modules>
+    <global>
+        <models>
+            <gene_braintreecustomfields>
+                <class>Gene_BraintreeCustomFields_Model</class>
+                <resourceModel>gene_braintreecustomfields_resource</resourceModel>
+            </gene_braintreecustomfields>
+            <gene_braintreecustomfields_resource>
+                <class>Gene_BraintreeCustomFields_Model_Resource</class>
+            </gene_braintreecustomfields_resource>
+        </models>
+
+        <blocks>
+            <gene_braintreecustomfields>
+                <class>Gene_BraintreeCustomFields_Block</class>
+            </gene_braintreecustomfields>
+        </blocks>
+
+        <helpers>
+            <gene_braintreecustomfields>
+                <class>Gene_BraintreeCustomFields_Helper</class>
+            </gene_braintreecustomfields>
+        </helpers>
+
+        <events>
+            <gene_braintree_creditcard_sale_array>
+                <observers>
+                    <gene_braintree_creditcard_channel>
+                        <type>singleton</type>
+                        <class>gene_braintreecustomfields/observer</class>
+                        <method>addBraintreeCustomField</method>
+                    </gene_braintree_creditcard_channel>
+                </observers>
+            </gene_braintree_creditcard_sale_array>
+            <gene_braintree_paypal_sale_array>
+                <observers>
+                    <gene_braintree_paypal_channel>
+                        <type>singleton</type>
+                        <class>gene_braintreecustomfields/observer</class>
+                        <method>addBraintreeCustomField</method>
+                    </gene_braintree_paypal_channel>
+                </observers>
+            </gene_braintree_paypal_sale_array>
+        </events>
+    </global>
+</config>

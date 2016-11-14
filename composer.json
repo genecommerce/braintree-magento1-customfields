@@ -1,0 +1,19 @@
+{
+  "name":"gene/braintreecustomfields",
+  "type":"magento-module",
+  "require":{
+    "magento-hackathon/magento-composer-installer":"*"
+  },
+  "extra": {
+    "map": [
+      [
+        "app/code/local/Gene/BraintreeCustomFields",
+        "app/code/local/Gene/BraintreeCustomFields"
+      ],
+      [
+        "app/etc/modules/Gene_BraintreeCustomFields.xml",
+        "app/etc/modules/Gene_BraintreeCustomFields.xml"
+      ]
+    ]
+  }
+}

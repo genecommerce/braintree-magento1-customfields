@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Gene_BraintreeCustomFields>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Gene_Braintree/>
+            </depends>
+        </Gene_BraintreeCustomFields>
+    </modules>
+</config>
